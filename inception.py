@@ -197,5 +197,4 @@ test_df.iloc[:, :] = np.average(pred_history.test_predictions, axis=0, weights=[
 test_df = test_df.stack().reset_index()
 test_df.insert(loc=0, column='ID', value=test_df['Image'].astype(str) + "_" + test_df['Diagnosis'])
 test_df = test_df.drop(["Image", "Diagnosis"], axis=1)
-
 test_df.to_csv('submission.csv', index=False)
