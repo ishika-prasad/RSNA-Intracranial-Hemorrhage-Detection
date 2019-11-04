@@ -24,7 +24,6 @@ def image_preprocessing(img, target_size=(256, 256)):
     brain_img = window_correction(img, 40, 80)
     subdural_img = window_correction(img, 80, 200)
     soft_img = window_correction(img, 40, 380)
-
     brain_img = (brain_img - 0) / 80
     subdural_img = (subdural_img - (-20)) / 200
     soft_img = (soft_img - (-150)) / 380
