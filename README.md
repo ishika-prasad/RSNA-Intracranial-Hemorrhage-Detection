@@ -21,7 +21,8 @@ Dataset can be downlaoded from the kaggle website through following link : ![dat
 
 </pre>
 
-# How to run
+## How to run
 <pre>
-Just run "python inception.py" after setting the parameters in the inception.py and it would use the pretrained ImageNet weights and fine-tnue the model
+Just run "python inception.py" after setting the parameters in the inception.py.
+It would use the pretrained ImageNet weights and fine-tnue the model
 </pre>
