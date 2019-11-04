@@ -1,13 +1,13 @@
 # RSNA-Intracranial-Hemorrhage-Detection
 
-![RSNA-Intracranial-Hemorrhage-Detection](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection)
+[RSNA-Intracranial-Hemorrhage-Detection](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection)
 Identify acute intracranial hemorrhage and its subtypes
 
 This project was hosted on Kaggle platform as a competition. This codebase  uses InceptionV3 model for this classification task.
 
 ## Dataset
 
-Dataset can be downlaoded from the kaggle website through following link : ![dataset](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection/data)
+Dataset can be downlaoded from the kaggle website through following link : [dataset](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection/data)
 
 
 ## Directory and code structure
