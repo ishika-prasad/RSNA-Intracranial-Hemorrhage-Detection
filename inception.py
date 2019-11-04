@@ -22,15 +22,25 @@ os.environ["CUDA_VISIBLE_DEVICES"]="0"
 assert 'GPU' in str(device_lib.list_local_devices())
 assert len(backend.tensorflow_backend._get_available_gpus()) > 0
 
-
+#### update this section with desired values  ########
 seed = 42
 version = 10
 
-BASE_PATH = '/mnt/nfs/scratch1/riteshkumar/'
-TRAIN_DIR = 'stage_1_train_images/'
-TEST_DIR = 'stage_1_test_images/'
-DICOM_PATH = '/mnt/nfs/scratch1/riteshkumar/df_trn.fth' # Obtained from https://www.kaggle.com/jhoward/creating-a-metadata-dataframe-fastai/output
+# set the base directory path below
+BASE_PATH = <base directory path>
+TRAIN_DIR = <training images data source>
+TEST_DIR = <test iamges datasource>
 
+DENSE = 12
+DROPOUT = 0.4
+LEARNING_RATE = 1e-4
+BATCH_SIZE = 4
+EPOCHS = 10
+N_CLASS = 6
+
+target_size=(224, 224, 3)
+
+###############################################################
 
 df = pd.read_csv(BASE_PATH + 'stage_1_train.csv').rename(columns={'Label': 'label'})
 df[['id', 'img', 'subtype']] = df['ID'].str.split('_', n=3, expand=True)
@@ -50,14 +60,7 @@ test_df["Diagnosis"] = test_df["ID"].str.slice(start=13)
 test_df = test_df.loc[:, ["Label", "Diagnosis", "Image"]]
 test_df = test_df.set_index(['Image', 'Diagnosis']).unstack(level=-1)
 
-DENSE = 12
-DROPOUT = 0.4
-LEARNING_RATE = 1e-4
-BATCH_SIZE = 4
-EPOCHS = 10
-N_CLASS = 6
 
-target_size=(224, 224, 3)
 
 
 
