@@ -26,3 +26,4 @@ Dataset can be downlaoded from the kaggle website through following link : [data
 Just run "python inception.py" after setting the parameters in the inception.py.
 It would use the pretrained ImageNet weights and fine-tnue the model
 </pre>
+
